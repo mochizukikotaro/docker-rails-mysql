@@ -1,6 +1,9 @@
 FROM ruby:2.4
 RUN apt-get update -qq && apt-get install -y \
-    build-essential libpq-dev apt-transport-https
+    build-essential \
+    libpq-dev \
+    apt-transport-https \
+    graphviz
 
 # node
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
