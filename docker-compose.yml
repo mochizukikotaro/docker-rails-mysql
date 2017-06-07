@@ -7,6 +7,8 @@ services:
       - ./mysql.cnf:/etc/mysql/conf.d/mysql.cnf
     environment:
       MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3306:3306"
   web:
     build: .
     volumes:
@@ -14,6 +16,7 @@ services:
       - bundle:/usr/local/bundle
     ports:
       - "3000:3000"
+      - "9292:9292"
     depends_on:
       - db
     tty: true
