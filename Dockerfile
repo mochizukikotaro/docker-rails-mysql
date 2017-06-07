@@ -3,7 +3,8 @@ RUN apt-get update -qq && apt-get install -y \
     build-essential \
     libpq-dev \
     apt-transport-https \
-    graphviz
+    graphviz \
+    vim
 
 # node
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
