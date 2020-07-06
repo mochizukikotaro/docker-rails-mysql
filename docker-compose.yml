@@ -4,13 +4,15 @@ services:
     image: mysql
     volumes:
       - data:/var/lib/mysql
-      - ./mysql.cnf:/etc/mysql/conf.d/mysql.cnf
+      - ./docker/db/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
     environment:
       MYSQL_ROOT_PASSWORD: password
     ports:
       - "3306:3306"
-  web:
-    build: .
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/app/Dockerfile
     volumes:
       - .:/myapp
       - bundle:/usr/local/bundle

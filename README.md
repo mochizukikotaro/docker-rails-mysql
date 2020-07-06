@@ -1,17 +1,24 @@
-# Usage
+# README
 
-```
-$ git clone git@github.com:mochizukikotaro/docker-rails-mysql.git; cd $(basename $_ .git)
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-$ docker-compose build
+Things you may want to cover:
 
-$ docker-compose run web rails db:create
->password
+* Ruby version
 
-$ docker-compose up -d
-$ docker-compose exec web rails s -b 0.0.0.0
-```
+* System dependencies
 
-Access `localhost:3000`, and see
+* Configuration
 
-![2017-03-05 17 06 23](https://cloud.githubusercontent.com/assets/7911481/23585614/1fb8ccb4-01c6-11e7-8c97-b6ed781d014f.png)
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
