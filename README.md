@@ -15,3 +15,5 @@ $ docker-compose exec app bash
 ```
 
 You can access `localhost:3000`
+
+<img width="1161" alt="スクリーンショット 2020-07-06 18 13 48" src="https://user-images.githubusercontent.com/7911481/86576948-766b8d80-bfb4-11ea-9cfa-0f6fff1b52c5.png">
