@@ -1,14 +1,14 @@
 version: '3'
 services:
   db:
-    image: mysql
+    image: mysql:5.7
     volumes:
       - data:/var/lib/mysql
       - ./docker/db/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
     environment:
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
     ports:
-      - "3306:3306"
+      - 3306:3306
   app:
     build:
       context: .
@@ -17,8 +17,8 @@ services:
       - .:/myapp
       - bundle:/usr/local/bundle
     ports:
-      - "3000:3000"
-      - "9292:9292"
+      - 3000:3000
+      - 9292:9292
     depends_on:
       - db
     tty: true
